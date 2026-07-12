@@ -1,0 +1,52 @@
+header, body, main, footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+main {
+    /* background-image: url('../images/Pretty\ Flowers\ 2.jpg'); */
+    background-size: contain;
+    background-position: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  width: 430px;
+  height: 215px;
+  margin: 100px auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color:plum;
+  background-color: rgba(221, 160, 221, 0.6);
+  text-shadow: 2px 4px 5px rgb(228, 184, 249);
+  box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  color:indigo;
+  font-size: 1.5em;
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+    margin: 100px auto;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    font-size: 3em;
+    color:rgb(64, 4, 94);
+    text-shadow: 5px 1px 2px rgb(245, 214, 252);
+}
+
+footer {
+    text-align: right;
+    position: fixed;
+    /* background-color: rgba(221, 160, 221, 0.3); */
+    height: 1.7em;
+    bottom: 1em;
+    right: .8em;
+    color:rgb(255, 255, 255);
+}
