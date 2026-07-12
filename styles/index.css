@@ -16,11 +16,12 @@ main {
 }
 
 .item {
-  width: 430px;
-  height: 215px;
+  width: 440px;
+  height: 170px;
   margin: 100px auto;
-  padding-top: 20px;
+  padding-top: 1px;
   padding-bottom: 40px;
+  padding-inline: 10px;
   background-color:plum;
   background-color: rgba(221, 160, 221, 0.6);
   text-shadow: 2px 4px 5px rgb(228, 184, 249);
@@ -28,6 +29,7 @@ main {
   text-align: center;
   color:indigo;
   font-size: 1.5em;
+  font-family: 'Dumbledor 2 regular';
 }
 
 h2 {
@@ -36,9 +38,10 @@ h2 {
     margin: 100px auto;
     padding-top: 40px;
     padding-bottom: 0px;
-    font-size: 3em;
+    font-size: 4em;
     color:rgb(64, 4, 94);
     text-shadow: 5px 1px 2px rgb(245, 214, 252);
+    font-family: Vivaldi;
 }
 
 footer {

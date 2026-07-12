@@ -1,0 +1,68 @@
+body. header, main, footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    margin: 50px auto;
+    font-family: Vivaldi;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'Dumbledor 2 regular';
+    font-size: 40px;
+    margin: 30px;
+    margin-top: 70px;
+
+}
+
+p {
+    font-size: 25px;
+    margin: .8em;
+    margin-left: 2em;
+    margin-bottom: .5em;
+}
+
+ul {
+    margin-right: 0;
+    margin-left: 2em;
+}
+
+li {
+    font-size: 25px;
+    margin-bottom: .5em;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    background-color: rgba(221, 160, 221, 0.6);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.details, .details1, .details2 {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: auto;
+    padding-top: 0px;
+}
+
+.details1, .details2 {
+    margin-top: -20px;
+    padding-top: 0px;
+    padding-bottom: 1em;
+}
+
+.details0 {
+    margin-top: 0px;
+    padding-top: 3.5em;
+}
