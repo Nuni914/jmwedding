@@ -36,7 +36,3 @@ var app = {
 }
 
 app.init();
-
-document.querySelector('.calendar').addEventListener('click', function() {
-  this.classList.toggle('flipped');
-});
