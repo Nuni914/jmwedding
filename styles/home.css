@@ -3,6 +3,11 @@ body. header, main, footer {
   padding: 0;
   box-sizing: border-box;
 }
+/* 1. Page Background */
+main {
+
+    margin: 0;
+}
 
 h1 {
     text-align: center;
@@ -12,7 +17,9 @@ h1 {
     font-family: Vivaldi;
     font-size: 50px;
     letter-spacing: 2px;
-    /* text-shadow: #2b4450; */
+    color:aliceblue;
+    text-shadow: rgb(0, 0, 0) 4px 1px 6px;
+    /* text-shadow: 5px 5px 20px rgba(252, 250, 250, 0.989); /* Soft, subtle shadow */
 }
 
 h2 {
@@ -49,7 +56,7 @@ aside {
     right: 0;
     width: 350px;
     height: auto;
-    background-color: rgba(6, 138, 114, 0.484);
+    background-color: rgba(2, 255, 209, 0.484);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
     text-align: center;
@@ -64,7 +71,7 @@ aside {
     right: auto;
     width: 350px;
     height: 100%;
-    background-color: rgba(6, 138, 114, 0.484);
+    background-color: rgba(2, 255, 209, 0.484);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     text-align: left;
     margin-inline: 0px;
@@ -121,7 +128,7 @@ aside {
     margin-right: 0;
     padding-right: .1em;
     padding-left: .1em;
-    padding-bottom: 1em;
+    padding-bottom: .5em;
     letter-spacing: .06em;
 }
 
@@ -141,6 +148,7 @@ aside {
 body {
     height:100vh;
     overflow: hidden;
+    fill-opacity: 50%;
 }
 section {
     height: 100vh;
@@ -162,6 +170,7 @@ h3 {
     margin-inline: 6em;
 }
 
+
 /*Calendar stuff below*/
 
 * {
@@ -181,7 +190,11 @@ body, html {
 }
 
 body {
-  background: #06c0c457;
+    background-image: url("../images/Naked Tree.jpg");
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes it stay put while scrolling */
+    min-height: 100vh;
 }
 
 .container {
