@@ -7,10 +7,12 @@ body. header, main, footer {
 h1 {
     text-align: center;
     position: relative;
-    margin: 2em;
+    margin: 1.5em 2em 2em 2em;
+    /* margin-top: 1em; */
     font-family: Vivaldi;
     font-size: 50px;
     letter-spacing: 2px;
+    /* text-shadow: #2b4450; */
 }
 
 h2 {
@@ -26,7 +28,7 @@ h3 {
 }
 
 p {
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'Dumbledor 2 regular';
     margin: .8em;
     margin-left: 2em;
@@ -45,28 +47,29 @@ aside {
     position: fixed;
     top: 0;
     right: 0;
-    width: 320px;
+    width: 350px;
     height: auto;
-    background-color: rgba(221, 160, 221, 0.6);
+    background-color: rgba(6, 138, 114, 0.484);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
 .calendar1 {
     font-family: 'Dumbledor 2 regular';
-    font-size: 1.5em;
+    font-size: 30px;
     position: flex;
     flex-direction: left;
     top: 0;
     right: auto;
-    width: 349.5x;
+    width: 350px;
     height: 100%;
-    background-color: rgba(221, 160, 221, 0.6);
+    background-color: rgba(6, 138, 114, 0.484);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     text-align: left;
     margin-inline: 0px;
     padding-top: 2em;
+    margin-bottom: 10px;
     /* padding: 20px; */
     /* flex-direction: column; */
     /* align-items: center; */
@@ -75,6 +78,11 @@ aside {
     /* position: fixed; */
     /* margin: 5px; */
     /* left: 0px; */
+}
+
+.plans1 b, .plans1 u {
+    font-size: 35px; /* Adjust to your preferred size */
+    letter-spacing: .1em;
 }
 
 .details, .details1, .details2 {
@@ -98,11 +106,29 @@ aside {
     padding-top: 3.5em;
 }
 
+.details1 {
+    font-size: 30px;
+    letter-spacing: .1em;
+}
+
+.details {
+    letter-spacing: .2em;
+}
+
 .plans {
     text-align: left;
     margin-left: 0;
-    padding-left: .35em;
+    margin-right: 0;
+    padding-right: .1em;
+    padding-left: .1em;
     padding-bottom: 1em;
+    letter-spacing: .06em;
+}
+
+.plans1 {
+    margin: 0;
+    padding-left: .4em;
+    font-family: 'Dumbledor 2 regular';
 }
 
 /* li {
@@ -126,7 +152,7 @@ h3 {
     /* margin: 50px 50px 10px 50px; */
     font-family: 'Dumbledor 2 regular';
     font-size: 60px;
-    padding-inline: 1em;
+    padding-inline: .61em;
     color: white;
     letter-spacing: 5px;
 }
@@ -140,7 +166,6 @@ h3 {
 
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
   list-style: none;
   margin: 0;
   outline: none;
@@ -156,8 +181,7 @@ body, html {
 }
 
 body {
-  background: #dfebed;
-  font-family: 'Roboto', sans-serif;
+  background: #06c0c457;
 }
 
 .container {
