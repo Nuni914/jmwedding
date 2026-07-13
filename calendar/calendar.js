@@ -35,4 +35,17 @@ var app = {
   }
 }
 
+
+
 app.init();
+
+const calendar = document.querySelector('.calendar');
+
+calendar.addEventListener('click', (e) => {
+  // Check if a date was clicked (spans usually contain the numbers)
+  const isDate = e.target.tagName === 'SPAN' || e.target.closest('.day');
+  
+  if (isDate) {
+    calendar.classList.toggle('is-flipped');
+  }
+});
