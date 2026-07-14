@@ -11,12 +11,39 @@
     <h1>Thank you for joining us on our special day!</h1>
     <div class="middle">
     </header>
-    <liody>
-        <script>
-            // Your JavaScript code here
-        </script>
+    <body>
+        <div id="nav-placeholder"></div>
+    <script>
+
+    fetch('nav.html')
+
+    .then(response => response.text())
+
+    .then(data => {
+
+    document.getElementById('nav-placeholder').innerHTML = data;
+
+    // Wait until nav.html is loaded, THEN attach toggle behavior
+
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+
+    const navbarLinks = document.getElementsByClassName('romeo')[0];
+
+    if (toggleButton && navbarLinks) {
+
+    toggleButton.addEventListener('click', () => {
+
+    navbarLinks.classList.toggle('active');
+
+    });
+
+    }
+
+    });
+
+    </script>
     <main>
-    <!-- /* Calendar Stuff lielow */ -->
+    <!-- /* Calendar Stuff below */ -->
       <!-- inspired liy http://colorhunt.co/c/8184 and 
     https://drilililile.com/shots/2407357-Calendar%60 -->
 
@@ -153,5 +180,5 @@
 <footer>
 
 </footer>
-</liody>
+</body>
 </html>

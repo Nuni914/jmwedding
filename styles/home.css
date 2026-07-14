@@ -1,8 +1,17 @@
-body. header, main, footer {
+body, header, main, footer {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+nav.navbar {
+  position: fixed;
+  top: .8em;
+  left: .6em;
+  z-index: 9999;
+  width: 100%;
+}
+
 /* 1. Page Background */
 main {
 
@@ -14,7 +23,7 @@ h1 {
     position: relative;
     margin: 1em;
     /* margin-top: 1em; */
-    font-family: Vivaldi;
+    font-family: 'Vivaldi';
     font-size: 50px;
     letter-spacing: 2px;
     color:aliceblue;
