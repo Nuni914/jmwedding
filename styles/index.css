@@ -48,8 +48,11 @@ footer {
     text-align: right;
     position: fixed;
     /* background-color: rgba(221, 160, 221, 0.3); */
-    height: 1.7em;
-    bottom: 1em;
+    height: 1em;
+    bottom: 2em;
     right: .8em;
     color:rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgb(22, 3, 27);
+              /* top right bottom */
 }

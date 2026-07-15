@@ -179,6 +179,19 @@ h3 {
     margin-inline: 6em;
 }
 
+footer {
+    text-align: right;
+    position: fixed;
+    /* background-color: rgba(221, 160, 221, 0.3); */
+    height: 1em;
+    bottom: .6em;
+    right: .8em;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 2px 3px rgb(22, 3, 27);
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
 
 /*Calendar stuff below*/
 
