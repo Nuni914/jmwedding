@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $adults = $_POST['adults'];
     $minors = $_POST['minors'];
+    $submit = $_POST['sbmt'] //submit button's name
 
     // Format the data
     $data = "Name: $username, Email: $email, Phone: $phone, Adults: $adults, Minors: $minors\n";
