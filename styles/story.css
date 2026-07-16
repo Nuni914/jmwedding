@@ -151,11 +151,11 @@ footer {
   z-index: 1000;
   text-align: right;
   height: 1em;
-  letter-spacing: 2px;
   font-size: 12px;
   padding-bottom: 1.5em;
   padding-right: .8em;
-  color:antiquewhite
+  color:antiquewhite;
+  text-shadow: 2px 2px 3px rgb(22, 3, 27);
 }
 
 h5 {
