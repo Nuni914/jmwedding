@@ -1,4 +1,4 @@
-body, header, footer, main {
+body, header, footer, main, .top, .bottom {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,6 +12,6 @@ nav.navbar {
   width: 100%;
 }
 
-.rsvp-form {
-  text-align: center;
+.form {
+  margin-left: 20px;
 }

@@ -49,3 +49,26 @@ calendar.addEventListener('click', (e) => {
     calendar.classList.toggle('is-flipped');
   }
 });
+
+const calendar = document.querySelector('.calendar');
+const days = document.querySelectorAll('.weeks span');
+const dismissBtn = document.querySelector('.dismiss');
+
+// Flip to back when a day is clicked
+days.forEach(day => {
+  day.addEventListener('click', () => {
+    calendar.classList.add('flipped');
+  });
+});
+
+// Flip back to front when dismiss is clicked
+dismissBtn.addEventListener('click', () => {
+  calendar.classList.remove('flipped');
+});
+
+document.querySelector('.weeks').addEventListener('click', (e) => {
+  if (e.target.tagName === 'SPAN') {
+    console.log('Date clicked:', e.target.innerText);
+    // Your logic here
+  }
+});

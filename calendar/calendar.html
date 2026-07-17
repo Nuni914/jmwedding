@@ -1,114 +1,199 @@
-<!-- inspired by http://colorhunt.co/c/8184 and
-    https://dribbble.com/shots/2407357-Calendar%60 -->
-    
-    <link href="../calendar/calendar.css" rel="stylesheet">
-    <script src="../calendar/calendar.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calendar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    <div class="container">
-      <div class="calendar">
-        <div class="front">
-          <div class="current-date">
-            <h1>Friday 15th</h1>
-            <h1>January 2016</h1> 
-          </div>
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-          <div class="current-month">
-            <ul class="week-days">
-              <li>MON</li>
-              <li>TUE</li>
-              <li>WED</li>
-              <li>THU</li>
-              <li>FRI</li>
-              <li>SAT</li>
-              <li>SUN</li>
-            </ul>
+        /* Calendar Container */
+        .calendar-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
 
-            <div class="weeks">
-              <div class="first">
-                <span class="last-month">28</span>
-                <span class="last-month">29</span>
-                <span class="last-month">30</span>
-                <span class="last-month">31</span>
-                <span>01</span>
-                <span>02</span>
-                <span>03</span>
-              </div>
+        /* Header Navigation */
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #4a6fa5;
+            color: #ffffff;
+            padding: 20px;
+        }
 
-              <div class="second">
-                <span>04</span>
-                <span>05</span>
-                <span class="event">06</span>
-                <span>07</span>
-                <span>08</span>
-                <span>09</span>
-                <span>10</span>
-              </div>
+        .calendar-header h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
 
-              <div class="third">
-                <span>11</span>
-                <span>12</span>
-                <span>13</span>
-                <span>14</span>
-                <span class="active">15</span>
-                <span>16</span>
-                <span>17</span>
-              </div>
+        .nav-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0 10px;
+            transition: transform 0.2s;
+        }
 
-              <div class="fourth">
-                <span>18</span>
-                <span>19</span>
-                <span>20</span>
-                <span>21</span>
-                <span>22</span>
-                <span>23</span>
-                <span>24</span>
-              </div>
+        .nav-btn:hover {
+            transform: scale(1.2);
+        }
 
-              <div class="fifth">
-                <span>25</span>
-                <span>26</span>
-                <span>27</span>
-                <span>28</span>
-                <span>29</span>
-                <span>30</span>
-                <span>31</span>
-              </div>
-            </div>
-          </div>
+        /* Calendar Body Grid Layout */
+        .calendar-body {
+            padding: 20px;
+        }
+
+        .weekdays, .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+        }
+
+        .weekdays {
+            font-weight: 600;
+            color: #777;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .days div {
+            padding: 12px 0;
+            font-size: 0.95rem;
+            color: #333;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .days div:hover:not(.empty) {
+            background: #e1e9f5;
+        }
+
+        /* Specialized day styles */
+        .days .today {
+            background: #4a6fa5;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .days .today:hover {
+            background: #3b5c8a;
+        }
+
+        .days .empty {
+            cursor: default;
+        }
+
+        /* CSS Grid responsiveness makes this naturally adaptive, 
+           but we can tighten padding on very small screens */
+        @media (max-width: 380px) {
+            .calendar-header { padding: 15px; }
+            .calendar-body { padding: 12px; }
+            .days div { padding: 8px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prevBtn" class="nav-btn">&lt;</button>
+            <h2 id="monthYearTitle"></h2>
+            <button id="nextBtn" class="nav-btn">&gt;</button>
         </div>
-
-        <div class="back">
-          <input placeholder="What's the event?">
-          <div class="info">
-            <div class="date">
-              <p class="info-date">
-              Date: <span>Jan 15th, 2016</span>
-              </p>
-              <p class="info-time">
-                Time: <span>6:35 PM</span>
-              </p>
+        <div class="calendar-body">
+            <div class="weekdays">
+                <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
             </div>
-            <div class="address">
-              <p>
-                Address: <span>129 W 81st St, New York, NY</span>
-              </p>
-            </div>
-            <div class="observations">
-              <p>
-                Observations: <span>Be there 15 minutes earlier</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button class="save">
-              Save <i class="ion-checkmark"></i>
-            </button>
-            <button class="dismiss">
-              Dismiss <i class="ion-android-close"></i>
-            </button>
-          </div>
+            <div id="daysContainer" class="days"></div>
         </div>
-
-      </div>
     </div>
+
+    <script>
+        const monthYearTitle = document.getElementById("monthYearTitle");
+        const daysContainer = document.getElementById("daysContainer");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        let currentDate = new Date();
+
+        function renderCalendar() {
+            daysContainer.innerHTML = "";
+            
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+
+            // Set header title
+            monthYearTitle.innerText = `${months[month]} ${year}`;
+
+            // Find first day of the month (0 = Sunday, 1 = Monday, etc.)
+            const firstDayIndex = new Date(year, month, 1).getDay();
+            
+            // Find total days in the current month
+            const totalDays = new Date(year, month + 1, 0).getDate();
+
+            // Render empty spacer blocks for the previous month's trailing days
+            for (let i = 0; i < firstDayIndex; i++) {
+                const emptyDiv = document.createElement("div");
+                emptyDiv.classList.add("empty");
+                daysContainer.appendChild(emptyDiv);
+            }
+
+            // Render active month days
+            const today = new Date();
+            for (let day = 1; day <= totalDays; day++) {
+                const dayDiv = document.createElement("div");
+                dayDiv.innerText = day;
+
+                // Highlight today's date if it matches real time
+                if (day === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
+                    dayDiv.classList.add("today");
+                }
+
+                daysContainer.appendChild(dayDiv);
+            }
+        }
+
+        // Event listeners for browser-side navigation
+        prevBtn.addEventListener("click", () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        });
+
+        // Initialize display
+        renderCalendar();
+    </script>
+</body>
+</html>
