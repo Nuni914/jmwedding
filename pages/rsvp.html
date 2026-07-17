@@ -43,23 +43,25 @@
         <section class="top">
             <div class="input">
                 <!-- Your updated Form -->
-<form id="rsvp-form">
-    Your Name:<br>
-    <input type="text" name="username" required><br>
-    Your E-mail:<br>
-    <input type="email" name="email" required><br>
-    Phone:<br>
-    <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" pattern="[0-9]{x}-[0-9]{x}-[0-9]{x}" required><br>
-    Adults:<br>
-    <input type="text" name="adults"><br>
-    Minors:<br>
-    <input type="text" name="minors"><br>
-    <input type="submit" value="Submit RSVP">
-</form>
-<div id="status-message"></div>
+        <form id="rsvp-form">
+            Your Name:<br>
+            <input type="text" name="username" required><br>
+            Your E-mail:<br>
+            <input type="email" name="email" required><br>
+            Phone:<br>
+            <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" pattern="[0-9]{x}-[0-9]{x}-[0-9]{x}" required><br>
+            Adults:<br>
+            <input type="text" name="adults" required><br>
+            Minors:<br>
+            <input type="text" name="minors" required><br>
+            Any Allergies?<br>
+            <input type="text" name="allergies" required><br>
+            <input type="submit" value="Submit RSVP">
+        </form>
+        <div id="status-message"></div>
 
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbw8fHFmdn1WoZJohtTkaTshrcwgb_Cxyq47HKRzpHttvF3AjZaLgZ0rt4cDrxtdQAY1fA/exec'; // Paste your URL here
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby4ADMWUUwGp6uKwVRMIlsL_qVGpYLLBBzBwTcYUTamecsM8NCAfMM1SsjIb4FBMzTmeA/exec'; // Paste your URL here
   const form = document.getElementById('rsvp-form');
   const statusMessage = document.getElementById('status-message');
 
