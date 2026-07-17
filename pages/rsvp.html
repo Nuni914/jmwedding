@@ -42,8 +42,43 @@
     <main>
         <section class="top">
             <div class="input">
-                <form action="my.File.php" method="POST">
-                    Your Name:<br>
+                <!-- Your updated Form -->
+<form id="rsvp-form">
+    Your Name:<br>
+    <input type="text" name="username" required><br>
+    Your E-mail:<br>
+    <input type="email" name="email" required><br>
+    Phone:<br>
+    <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" pattern="[0-9]{x}-[0-9]{x}-[0-9]{x}" required><br>
+    Adults:<br>
+    <input type="text" name="adults"><br>
+    Minors:<br>
+    <input type="text" name="minors"><br>
+    <input type="submit" value="Submit RSVP">
+</form>
+<div id="status-message"></div>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw8fHFmdn1WoZJohtTkaTshrcwgb_Cxyq47HKRzpHttvF3AjZaLgZ0rt4cDrxtdQAY1fA/exec'; // Paste your URL here
+  const form = document.getElementById('rsvp-form');
+  const statusMessage = document.getElementById('status-message');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    statusMessage.innerHTML = "Sending...";
+    
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        statusMessage.innerHTML = "RSVP Sent Successfully!";
+        form.reset();
+      })
+      .catch(error => {
+        statusMessage.innerHTML = "Error! Please try again.";
+        console.error('Error!', error.message);
+      });
+  });
+</script>
+                    <!-- Your Name:<br>
                     <input type="text" name="username"><br>
                     Your E-mail:<br>
                     <input type="email" name="email"><br>
@@ -53,8 +88,7 @@
                     <input type="adults" name="adults"><br>
                     Number of Minors:<br>
                     <input type="minors" name="minors"><br>
-                    <input type="Submit" name="sbmt" value="Submit">
-                </form>
+                    <input type="Submit" name="sbmt" value="Submit"> -->
             </div>
         </section>
         <section class="bottom">
