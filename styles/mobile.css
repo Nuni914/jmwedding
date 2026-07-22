@@ -1,0 +1,21 @@
+@media screen and (max-width: 550px) {
+  /* Show the hamburger menu */
+  .toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+
+  /* Hide the actual menu links by default on mobile */
+  .romeo {
+    display: none;
+    width: 100%;
+  }
+
+  /* Class to show the menu when toggled */
+  .romeo.active {
+    display: block;
+  }
+}

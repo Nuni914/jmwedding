@@ -158,6 +158,9 @@ body {
     height:100vh;
     overflow: hidden;
     fill-opacity: 50%;
+    height: auto;
+    min-height: 100%;
+    overflow: auto; /* or 'auto' */;
 }
 section {
     height: 100vh;
@@ -282,6 +285,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 40px;
+  width: 100%;
 }
 
 .weeks div {
@@ -444,4 +448,32 @@ body {
 /* The class we will toggle via JavaScript */
 .calendar.is-flipped {
   transform: rotateY(180deg);
+}
+
+
+
+/* Where to do it: In your main stylesheet or a <style> tag */
+
+.first {
+  display: flex;
+  justify-content: space-between; /* Distribute days evenly */
+  width: 100%;
+}
+
+.first span {
+  flex: 1; /* Each day takes equal width */
+  text-align: center;
+  padding: 10px 5px; /* Adjust padding for mobile */
+  min-width: 30px; /* Prevent shrinking too much */
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .first {
+    font-size: 0.9rem; /* Slightly smaller text for small screens */
+  }
+  
+  .first span {
+    padding: 8px 2px; /* Tighter padding on mobile */
+  }
 }
