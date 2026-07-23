@@ -1,4 +1,4 @@
-body, header, main, footer {
+body, header, main, footer, aside {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,19 +12,16 @@ nav.navbar {
   width: 100%;
 }
 
+
+
 /* 1. Page Background */
-main {
-
-    margin: 0;
-}
-
 h1 {
     text-align: center;
     position: relative;
     margin: 1em;
     /* margin-top: 1em; */
     font-family: 'Vivaldi';
-    font-size: 50px;
+    font-size: 70px;
     letter-spacing: 2px;
     color:aliceblue;
     text-shadow: rgb(0, 0, 0) 4px 1px 6px;
@@ -34,8 +31,10 @@ h1 {
 h2 {
     font-family: 'Dumbledor 2 regular';
     font-size: 40px;
-    margin: 30px;
-    margin-top: 70px;
+    margin-top: 0;
+    padding-inline: 0;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 h3 {
@@ -46,7 +45,7 @@ h3 {
 p {
     font-size: 30px;
     font-family: 'Dumbledor 2 regular';
-    margin: .8em;
+    margin: 1em;
     margin-left: 2em;
     margin-bottom: .5em;
 }
@@ -59,30 +58,31 @@ p {
     font-family: 'Dumbledor 2 regular';
 } */
 
-aside {
+.right {
     position: fixed;
     top: 0;
     right: 0;
-    width: 350px;
+    width: 23%;
     height: auto;
     background-color: rgba(2, 255, 209, 0.484);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding-left: 2em;
     text-align: center;
+    
 }
 
-.calendar1 {
+.left {
     font-family: 'Dumbledor 2 regular';
     font-size: 30px;
-    position: flex;
+    position: fixed;
     flex-direction: left;
     top: 0;
     right: auto;
-    width: 350px;
+    width: 23%;
     height: 100%;
     background-color: rgba(2, 255, 209, 0.484);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    text-align: left;
+    text-align: center;
     margin-inline: 0px;
     padding-top: 2em;
     margin-bottom: 10px;
@@ -96,35 +96,32 @@ aside {
     /* left: 0px; */
 }
 
-.plans1 b, .plans1 u {
-    font-size: 35px; /* Adjust to your preferred size */
-    letter-spacing: .1em;
-}
 
-.details, .details1, .details2 {
+.details, .details1 {
     margin-right: 0px;
-    margin-left: 0px;
-    width: auto;
+    margin-left: 0;
     padding-top: 0px;
     font-family: 'Dumbledor 2 regular';
 }
 
-.details1, .details2 {
+.details1 {
     margin-top: -20px;
     padding-top: 0px;
     padding-bottom: 0em;
+    margin-left: -60px;
 }
 
-.details0 {
+.details {
     /* font-family: 'Dumbledor 2 regular'; */
-    margin-top: 0px;
-    margin-inline: 0px;
+    margin-top: -90px;
+    margin-left: -5%;
     padding-top: 3.5em;
 }
 
 .details1 {
     font-size: 30px;
     letter-spacing: .1em;
+    margin-left: -5%
 }
 
 .details {
@@ -132,16 +129,6 @@ aside {
 }
 
 .plans {
-    text-align: left;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: .1em;
-    padding-left: .1em;
-    padding-bottom: .5em;
-    letter-spacing: .06em;
-}
-
-.plans1 {
     margin: 0;
     padding-left: .4em;
     font-family: 'Dumbledor 2 regular';
@@ -155,12 +142,11 @@ aside {
     /* margin-bottom: .5em; */
 
 body {
-    height:100vh;
+    height: auto;
     overflow: hidden;
     fill-opacity: 50%;
-    height: auto;
     min-height: 100%;
-    overflow: auto; /* or 'auto' */;
+
 }
 section {
     height: 100vh;
@@ -171,8 +157,9 @@ h3 {
     position: relative;
     /* margin: 50px 50px 10px 50px; */
     font-family: 'Dumbledor 2 regular';
-    font-size: 60px;
-    padding-inline: .61em;
+    font-size: 50px;
+    padding-inline: 10%;
+    padding-left: 15%;
     color: white;
     letter-spacing: 5px;
 }
@@ -194,6 +181,7 @@ footer {
     letter-spacing: 2px;
     font-size: 16px;
 }
+
 
 
 
