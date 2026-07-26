@@ -1,0 +1,52 @@
+@media screen and (max-width: 1024px) {
+/*triggers when the screen is 480px or smaller*/
+  .image-container {
+    display: flex;             /* Aligns images in a horizontal row */
+    flex-direction: row;       /* Forces horizontal alignment */
+    flex-wrap: nowrap;         /* Prevents images from wrapping to a new line */
+    justify-content: space-between; /* Spaces them evenly across the screen */
+    gap: 30px;                 /* Adds a small gap between the pictures */
+    width: auto;               /* Ensures the container uses full width */
+  }
+}
+
+/* unlock our next chapter box */
+.item {
+  width: 35%;
+  height: auto;
+  margin: auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color:plum;
+  background-color: rgba(221, 160, 221, 0.6);
+  text-shadow: 2px 4px 5px rgb(228, 184, 249);
+  box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  color:indigo;
+  font-size: 3em;
+  font-family: 'Dumbledor 2 regular';
+}
+
+/*title*/
+h2 {
+    position: relative;
+    text-align: center;
+    margin: 5% auto;
+    font-size: 6em;
+    color:rgb(64, 4, 94);
+    text-shadow: 5px 1px 2px rgb(245, 214, 252);
+    font-family: 'Vivaldi';
+}
+
+footer {
+    text-align: right;
+    position: fixed;
+    /* background-color: rgba(221, 160, 221, 0.3); */
+    height: 1em;
+    bottom: 1.5em;
+    right: .8em;
+    color:rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgb(22, 3, 27);
+    font-size: 26px;
+  }
