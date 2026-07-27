@@ -58,12 +58,16 @@ p {
     font-family: 'Dumbledor 2 regular';
 } */
 
+.left, .right {
+  display: block;
+}
+
 .right {
     position: fixed;
     top: 0;
     right: 0;
     width: 23%;
-    height: auto;
+    height: 100%;
     background-color: rgba(2, 255, 209, 0.484);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     padding-left: 2em;
@@ -85,7 +89,8 @@ p {
     text-align: center;
     margin-inline: 0px;
     padding-top: 2em;
-    margin-bottom: 10px;
+    margin-bottom: 10%;
+    margin-left: -1%;
     /* padding: 20px; */
     /* flex-direction: column; */
     /* align-items: center; */
@@ -98,24 +103,24 @@ p {
 
 
 .details, .details1 {
-    margin-right: 0px;
-    margin-left: 0;
-    padding-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: auto;
     font-family: 'Dumbledor 2 regular';
 }
 
 .details1 {
-    margin-top: -20px;
-    padding-top: 0px;
-    padding-bottom: 0em;
-    margin-left: -60px;
+    margin-top: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: auto;
 }
 
 .details {
     /* font-family: 'Dumbledor 2 regular'; */
-    margin-top: -90px;
+    margin-top: -20%;
     margin-left: -5%;
-    padding-top: 3.5em;
+    padding-top: 40%;
 }
 
 .details1 {
@@ -130,8 +135,10 @@ p {
 
 .plans {
     margin: 0;
-    padding-left: .4em;
+    margin-left: 8%;
+    margin-right: 6%;
     font-family: 'Dumbledor 2 regular';
+    line-height: 150%;
 }
 
 /* li {
@@ -182,7 +189,24 @@ footer {
     font-size: 16px;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 20px; /* Optional: adds space between columns */
+  align-items: start;
+}
 
+aside.left {
+  grid-column: 1;
+}
+
+.container {
+  grid-column: 2;
+}
+
+aside.right {
+  grid-column: 3;
+}
 
 
 
@@ -456,12 +480,6 @@ body {
   box-sizing: border-box;
 }
 
-@media (max-width: 480px) {
-  .first {
-    font-size: 0.9rem; /* Slightly smaller text for small screens */
-  }
-  
-  .first span {
-    padding: 8px 2px; /* Tighter padding on mobile */
-  }
+.current-date h3 {
+  font-size: clamp(1.5rem, 8vw, 3rem); /* Scales between 1.5rem and 3rem */
 }

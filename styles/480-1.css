@@ -1,0 +1,70 @@
+body, header, main, footer, aside {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tablet Adjustments (768px) */
+@media (max-width: 768px) {
+  .left, .right {
+    position: relative; /* Stack sidebars instead of fixing them to sides */
+    width: 100%;
+    height: auto;
+    padding: 1em 0;
+  }
+
+  .container {
+    max-width: 90%; /* Give the calendar more room */
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .calendar {
+    height: auto; /* Allow content to dictate height */
+    min-height: 500px;
+  }
+}
+
+/* Mobile Adjustments (480px) */
+@media (max-width: 480px) {
+  .current-date, .week-days, .weeks {
+    padding: 20px; /* Reduce inner padding */
+  }
+
+  .weeks div {
+    font-size: 1em; /* Shrink text slightly */
+    margin-bottom: 10px;
+  }
+
+  .weeks span {
+    padding: 5px; /* Smaller touch targets for tight grids */
+  }
+
+  h1 {
+    font-size: 40px; /* Reduce large heading size */
+  }
+
+  .calendar {
+    width: 60%;
+    letter-spacing: 1%;
+    margin-inline: 2%;
+    height: min-content;
+  }
+
+  .current-month {
+    font-size: 12px;
+  }
+
+  .current-date h3 {
+    font-size: 30px;
+  }
+
+  main {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 20px;
+}
+
+}
+
+}
