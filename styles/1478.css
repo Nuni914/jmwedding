@@ -12,7 +12,7 @@
 
 /* unlock our next chapter box */
 .item {
-  width: 35%;
+  width: 25%;
   height: auto;
   margin: auto;
   padding-top: 1%;
@@ -23,7 +23,7 @@
   box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   color:indigo;
-  font-size: 3em;
+  font-size: 20px;
   font-family: 'Dumbledor 2 regular';
 }
 
@@ -32,7 +32,7 @@ h2 {
     position: relative;
     text-align: center;
     margin: 5% auto;
-    font-size: 6em;
+    font-size: 70px;
     color:rgb(64, 4, 94);
     text-shadow: 5px 1px 2px rgb(245, 214, 252);
     font-family: 'Vivaldi';
@@ -48,5 +48,5 @@ footer {
     color:rgb(255, 255, 255);
     letter-spacing: 2px;
     text-shadow: 2px 2px 3px rgb(22, 3, 27);
-    font-size: 26px;
+    font-size: 22px;
   }
