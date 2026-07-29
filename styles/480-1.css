@@ -41,7 +41,7 @@ body, header, main, footer, aside {
   }
 
   h1 {
-    font-size: 40px; /* Reduce large heading size */
+    font-size: 12px; /* Reduce large heading size */
   }
 
   .calendar {
@@ -63,8 +63,49 @@ body, header, main, footer, aside {
   display: grid;
   grid-template-columns: 200px 1fr 200px;
   gap: 20px;
-}
+  }
 
-}
+  footer {
+    font-size: 8px;
+  }
 
-}
+  .left {
+    top: 0;
+    margin-top: -139%;
+    height: 20em;
+    width: 21%;
+  }
+
+  .left h2 {
+    font-size: 25px;
+    padding-top: 1.3em;
+    
+  }
+  .plans {
+    font-size: 18px;
+    line-height: 1em;
+    padding-bottom: 5em;
+  }
+
+  .right {
+    top: 0;
+    margin-top: -139%;
+    width: 20%;
+    margin-left: 80%;
+    height: 40em;
+    padding-top: 4em;
+  }
+
+  .right h2 {
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 5%;
+  }
+
+  .right p {
+    font-size: 18px;
+  }
+
+
+
+  }
