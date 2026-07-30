@@ -1,74 +1,40 @@
-var app = {
-  settings: {
-    container: $('.calendar'),
-    calendar: $('.front'),
-    days: $('.weeks span'),
-    form: $('.back'),
-    input: $('.back input'),
-    buttons: $('.back button')
-  },
+document.addEventListener("DOMContentLoaded", () => {
 
-  init: function() {
-    instance = this;
-    settings = this.settings;
-    this.bindUIActions();
-  },
+    const calendar = document.querySelector(".calendar");
+    const front = document.querySelector(".front");
+    const back = document.querySelector(".back");
 
-  swap: function(currentSide, desiredSide) {
-    settings.container.toggleClass('flip');
+    const days = document.querySelectorAll(".weeks span");
 
-    currentSide.fadeOut(900);
-    currentSide.hide();
-    desiredSide.show();
+    const input = document.querySelector(".back input");
 
-  },
+    const buttons = document.querySelectorAll(".back button");
 
-  bindUIActions: function() {
-    settings.days.on('click', function(){
-      instance.swap(settings.calendar, settings.form);
-      settings.input.focus();
+    // Hide the back when the page loads
+    back.style.display = "none";
+
+    // Flip to the back when a calendar day is clicked
+    days.forEach(day => {
+        day.addEventListener("click", () => {
+
+            calendar.classList.add("is-flipped");
+
+            front.style.display = "none";
+            back.style.display = "block";
+
+            input.focus();
+        });
     });
 
-    settings.buttons.on('click', function(){
-      instance.swap(settings.form, settings.calendar);
+    // Flip back when Save or Dismiss is clicked
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+
+            calendar.classList.remove("is-flipped");
+
+            back.style.display = "none";
+            front.style.display = "block";
+        });
     });
-  }
-}
 
-
-
-app.init();
-
-const calendar = document.querySelector('.calendar');
-
-calendar.addEventListener('click', (e) => {
-  // Check if a date was clicked (spans usually contain the numbers)
-  const isDate = e.target.tagName === 'SPAN' || e.target.closest('.day');
-  
-  if (isDate) {
-    calendar.classList.toggle('is-flipped');
-  }
-});
-
-const calendar = document.querySelector('.calendar');
-const days = document.querySelectorAll('.weeks span');
-const dismissBtn = document.querySelector('.dismiss');
-
-// Flip to back when a day is clicked
-days.forEach(day => {
-  day.addEventListener('click', () => {
-    calendar.classList.add('flipped');
-  });
-});
-
-// Flip back to front when dismiss is clicked
-dismissBtn.addEventListener('click', () => {
-  calendar.classList.remove('flipped');
-});
-
-document.querySelector('.weeks').addEventListener('click', (e) => {
-  if (e.target.tagName === 'SPAN') {
-    console.log('Date clicked:', e.target.innerText);
-    // Your logic here
-  }
 });

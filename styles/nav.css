@@ -8,10 +8,9 @@ body {
 }
 /*new css above and spelling of navbar below*/
 .navbar {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
+    display: left;
+    justify-content: left;
+    align-items: left;
     background-color: transparent;
     color: rgb(85, 34, 34);
 }

@@ -15,6 +15,7 @@ html {
 body {
     min-height: 100vh;
     margin: 0;
+    padding-top: 90px;
 
     background-image: url("../images/Naked Tree.jpg");
     background-size: cover;
@@ -31,13 +32,26 @@ body {
 ========================= */
 
 nav.navbar {
-    position: fixed;
-    top: 0.8rem;
-    left: 0.6rem;
-    z-index: 9999;
-    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%; /* Or a specific width if you want a sidebar */
+    align-items: left;
+    justify-content: left;
 }
 
+nav.romeo ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+  display: flex; /* Keep your existing flex layout */
+}
+
+nav.romeo {
+  margin-left: 0;
+  padding-left: 0;
+}
 
 /* =========================
    HEADER
@@ -50,6 +64,7 @@ nav.navbar {
 .page-header h1 {
     max-width: 1100px;
     margin: 0 auto;
+    padding-top: .5em;
 
     color: aliceblue;
     font-family: "Vivaldi", cursive;
@@ -266,3 +281,4 @@ footer {
 footer p {
     margin: 0;
 }
+

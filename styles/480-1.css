@@ -42,6 +42,74 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 65px;
+  }
+
+  nav.navbar {
+    justify-content: flex-end;
+    padding: 0.8rem 1rem;
+    min-height: 60px;
+  }
+
+  .toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 32px;
+    height: 24px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toggle-button span {
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background: #00f0a8;
+    border-radius: 3px;
+  }
+
+  .romeo {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    padding: 1rem;
+
+    background: rgba(0, 0, 0, 0.92);
+  }
+
+  .romeo.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .romeo a {
+    width: 100%;
+    padding: 0.9rem 0;
+
+    font-size: 1.6rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .romeo a:last-child {
+    border-bottom: none;
+  }
+}
+
 
 /* =========================
    PHONES

@@ -6,10 +6,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link href="../styles/home-2.css" rel="stylesheet">
     <link href="../styles/480-1.css" rel="stylesheet">
+    <link href="../styles/nav.css" rel="stylesheet">
     <script src="../calendar.js"></script>
     <title>Joshua & Marlene's Wedding Site</title>
 </head>
 <body>
+  <script>
+
+    fetch('nav.html')
+
+    .then(response => response.text())
+
+    .then(data => {
+
+    document.getElementById('nav-placeholder').innerHTML = data;
+
+    // Wait until nav.html is loaded, THEN attach toggle behavior
+
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+
+    const navbarLinks = document.getElementsByClassName('romeo')[0];
+
+    if (toggleButton && navbarLinks) {
+
+    toggleButton.addEventListener('click', () => {
+
+    navbarLinks.classList.toggle('active');
+
+    });
+
+    }
+
+    });
+
+  </script>
 <header class="page-header">
     <h1>Thank you for joining us on our special day!</h1>
     <div class="middle">
@@ -125,9 +155,9 @@
                 Address: <span></span>
               </p>
             </div>
-            <div class="oliservations">
+            <div class="notes">
               <p>
-                Oliservations: <span></span>
+                Notes: <span></span>
               </p>
             </div>
           </div>
@@ -142,8 +172,8 @@
           </div>
         </div> -->
 
-      <!-- </div>
-    </div> -->
+      </div>
+    </div>
 
 <aside class="right">
   <u><h2 class="details">Special Day:</h2></u>
@@ -160,35 +190,5 @@
 <footer>
     <h5>&copy; Joshua & Marlene's 2029 Wedding | All rights reserved</h5>
 </footer>
-
-  <script>
-
-    fetch('nav.html')
-
-    .then(response => response.text())
-
-    .then(data => {
-
-    document.getElementById('nav-placeholder').innerHTML = data;
-
-    // Wait until nav.html is loaded, THEN attach toggle behavior
-
-    const toggleButton = document.getElementsByClassName('toggle-button')[0];
-
-    const navbarLinks = document.getElementsByClassName('romeo')[0];
-
-    if (toggleButton && navbarLinks) {
-
-    toggleButton.addEventListener('click', () => {
-
-    navbarLinks.classList.toggle('active');
-
-    });
-
-    }
-
-    });
-
-  </script>
 </body>
 </html>
