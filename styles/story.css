@@ -4,30 +4,12 @@ body, header, footer, main {
     box-sizing: border-box;
 }
 
-nav.navbar {
-    position: fixed;
-    top: .5em;
-    left: .2em;
-    width: 100%;
-}
-
-.navbar {
-    margin-top: 0;
-    padding-left: 0;
-}
-
-.navbar .romeo ul {
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    list-style: none; /* Recommended to remove bullet points if not already done */
-}
-
 h1 {
     text-align: center;
     font-size: 45px;
-    margin-bottom: 0;
+    margin-bottom: 2;
     padding-bottom: 0;
+    top: 0;
     font-family: 'Vivaldi';
     letter-spacing: 3px;
 }
@@ -38,8 +20,10 @@ body {
     background-position: center;
     background-attachment: fixed;
     min-height: auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     height: auto;
+    padding-top: 58px;
 }
 
 /*his name*/
@@ -86,10 +70,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
-  margin-top: -2%;
-  margin-left: 35%;
-  margin-bottom: -1%;
+  width: 50%;
+  margin-top: .8%;
+  margin-left: 25%;
+  margin-bottom: .8%;
 }
 
 .fancy-divider {
@@ -119,7 +103,7 @@ body {
     position: fixed;               /* Or 'absolute' depending on your layout */
     bottom: 3%;
     right: 1%;
-    z-index: 33%;                 /* Ensures it stays on top of other content */
+    z-index: 33;                 /* Ensures it stays on top of other content */
     left: 0;
 }
 
@@ -139,18 +123,6 @@ body {
     letter-spacing: 2%;
 }
 
-/* Target the links inside your navigation menu */
-.navbar a, 
-.romeo ul li a {
-    font-size: 16px; /* Adjust this number to make it as small as you like */
-    text-decoration: none; /* Optional: removes underlines if you don't want them */
-}
-
-/* If you want to specifically target the toggle button (hamburger menu) as well */
-.toggle-button {
-    transform: scale(0.8); /* Shrinks the hamburger icon slightly */
-}
-
 footer {
   position: fixed;
   bottom: .6em;
@@ -168,4 +140,227 @@ footer {
 
 h5 {
   margin: 10px 0px;
+}
+
+
+/* ==========================================
+   RESPONSIVE STORY PAGE
+========================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*
+   Tablet and phone layout
+*/
+@media screen and (max-width: 900px) {
+    body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-attachment: scroll;
+
+        /* Space for the fixed navigation */
+        padding-top: 58px;
+    }
+
+    header {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+        line-height: 1.1;
+        text-align: center;
+    }
+
+    main {
+        width: min(94%, 760px);
+        margin: 0 auto;
+        padding-bottom: 2rem;
+    }
+
+    /*
+       Each person's section becomes one column.
+    */
+    .story-section {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    .story-section aside,
+    .story-section > div {
+        width: 100%;
+        max-width: none;
+    }
+
+    /*
+       Joshua's image and name
+    */
+    .picture1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        margin: 0 0 1rem;
+    }
+
+    .picture1 img {
+        width: min(70%, 280px);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .his {
+        width: 100%;
+        margin: 0.5rem 0 0;
+
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        text-align: center;
+    }
+
+    /*
+       Joshua's text
+    */
+    .story1 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
+        line-height: 1.55;
+        letter-spacing: normal;
+        text-align: left;
+    }
+
+    /*
+       Decorative divider
+    */
+    .banner-container {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .fancy-divider {
+        width: min(100%, 600px);
+        height: auto;
+    }
+
+    /*
+       Marlene's section:
+       show image first and story underneath.
+    */
+    .story-section-marlene {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .story-section-marlene aside {
+        order: 2;
+    }
+
+    .story-section-marlene > div {
+        order: 1;
+    }
+
+    .picture2 {
+        position: static;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        margin: 0 0 1rem;
+    }
+
+    .picture2 img {
+        width: min(70%, 280px);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .her {
+        width: 100%;
+        margin: 0.5rem 0 0;
+
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        text-align: center;
+    }
+
+    .story2 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
+        line-height: 1.55;
+        letter-spacing: normal;
+        text-align: left;
+    }
+
+    /*
+       Footer becomes part of the normal page flow.
+    */
+    footer {
+        position: static;
+
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 1rem;
+
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    footer h5 {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .picture1 img,
+    .picture2 img {
+        width: min(78%, 250px);
+    }
+
+    .story1,
+    .story2 {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .banner-container {
+        margin: 0.5rem auto;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
 }

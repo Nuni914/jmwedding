@@ -15,12 +15,6 @@ body {
     color: rgb(85, 34, 34);
 }
 
-/* .page-title p {
-    font-size: 30px;
-    margin: 8px;
-    margin-bottom: 2px;
-} */
-
 .romeo {
     background-color: transparent;
     border-radius: 5px;
@@ -74,40 +68,49 @@ body {
     border-radius: 10px;
 }
 
-/* @media screen and (max-width:800px){
-/*spelling of navbar*/   
-    /* .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+/* 1. Hide the hamburger button by default (Desktop) */
+.toggle-button {
+    display: none; /* Hidden on desktop */
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
 
+/* 2. Desktop Navigation Layout */
+.romeo ul {
+    display: flex;
+    flex-direction: row; /* Horizontal on desktop */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Mobile Navigation (Screens smaller than 900px) */
+@media screen and (max-width: 900px) {
     .toggle-button {
-        display: flex;
+        display: flex; /* Show hamburger on mobile */
     }
 
     .romeo {
-        display: none;
+        display: none; /* Hide menu links by default on mobile */
         width: 100%;
+    }
+
+    /* Show links when the 'active' class is toggled by JS */
+    .romeo.active {
+        display: block;
     }
 
     .romeo ul {
+        flex-direction: column; /* Vertical list on mobile */
         width: 100%;
-        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9); /* Example background */
     }
-
-    .romeo ul li {
-        text-align: center;
-    }
-
-    .romeo ul li a {
-        padding: 8px 16px;
-    } */
-/*the .active is not a :psuedo class*/
-    /* .romeo.active {
-        display: flex;
-    }
-
-    nav a {
-        border: 0px;
-    } */
-
+}
