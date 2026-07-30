@@ -1,0 +1,268 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    background-image: url("../images/Naked Tree.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav.navbar {
+    position: fixed;
+    top: 0.8rem;
+    left: 0.6rem;
+    z-index: 9999;
+    width: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header {
+    padding: 2rem 1rem 1.5rem;
+}
+
+.page-header h1 {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    color: aliceblue;
+    font-family: "Vivaldi", cursive;
+    font-size: clamp(2.25rem, 6vw, 4.375rem);
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 4px 1px 6px rgb(0, 0, 0);
+}
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.home-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(220px, 1fr)
+        minmax(360px, 2fr)
+        minmax(220px, 1fr);
+
+    align-items: start;
+    gap: 1.5rem;
+
+    width: min(1400px, 96%);
+    margin: 0 auto;
+    padding: 1rem 0 4rem;
+}
+
+
+/* =========================
+   SIDE PANELS
+========================= */
+
+.left,
+.right {
+    position: static;
+
+    width: auto;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+    padding: 1.5rem;
+
+    background-color: rgba(2, 255, 209, 0.48);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+
+    font-family: "Dumbledor 2 regular", serif;
+}
+
+.left h2,
+.right h2 {
+    margin: 0 0 1rem;
+    padding: 0;
+
+    font-family: "Dumbledor 2 regular", serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.1;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.right h2:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.plans {
+    margin: 0;
+    padding-left: 1.5rem;
+
+    font-size: clamp(1.1rem, 2vw, 1.75rem);
+    line-height: 1.4;
+    text-align: left;
+
+    list-style: disc;
+}
+
+.plans li {
+    margin-bottom: 1rem;
+    list-style: disc;
+}
+
+.right p {
+    margin: 0;
+
+    font-family: "Dumbledor 2 regular", serif;
+    font-size: clamp(1.15rem, 2vw, 1.875rem);
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+
+/* =========================
+   CALENDAR
+========================= */
+
+.calendar-area {
+    width: 100%;
+    min-width: 0;
+}
+
+.calendar {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: #2b4450;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.current-date {
+    padding: 1.75rem 1rem;
+
+    border-bottom: 1px solid rgba(73, 114, 133, 0.6);
+    text-align: center;
+}
+
+.current-date h3 {
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    font-family: "Dumbledor 2 regular", serif;
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: 4px;
+}
+
+.week-days {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem 1rem;
+
+    color: #dfebed;
+    font-weight: 600;
+    text-align: center;
+    list-style: none;
+}
+
+.week-days li {
+    min-width: 0;
+    list-style: none;
+}
+
+.weeks {
+    width: 100%;
+    padding: 0 1rem 1.5rem;
+    color: white;
+}
+
+.weeks > div {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.weeks span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    aspect-ratio: 1;
+    padding: 0.25rem;
+
+    font-size: clamp(0.85rem, 2vw, 1.2rem);
+}
+
+.last-month {
+    opacity: 0.3;
+}
+
+.weeks span.active {
+    background: #f78536;
+    border-radius: 50%;
+}
+
+.weeks span:not(.last-month):hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.wedding-day {
+    outline: 2px solid white;
+    outline-offset: -3px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    position: static;
+    width: 100%;
+    padding: 1rem;
+
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgb(22, 3, 27);
+}
+
+footer p {
+    margin: 0;
+}

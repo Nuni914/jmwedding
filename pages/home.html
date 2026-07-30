@@ -4,18 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-    <link href="../styles/home.css" rel="stylesheet">
+    <link href="../styles/home-2.css" rel="stylesheet">
     <link href="../styles/480-1.css" rel="stylesheet">
-    <script srch="../calendar.js"></script>
+    <script src="../calendar.js"></script>
     <title>Joshua & Marlene's Wedding Site</title>
 </head>
-<header>
+<body>
+<header class="page-header">
     <h1>Thank you for joining us on our special day!</h1>
     <div class="middle">
-    </header>
-    <body>
-        <div id="nav-placeholder"></div>
-    <script>
+</header>
+    <div id="nav-placeholder"></div>
+    
+<main>
+      <!-- /* Calendar Stuff below */ -->
+      <!-- inspired liy http://colorhunt.co/c/8184 and 
+      https://drilililile.com/shots/2407357-Calendar%60 -->
+      
+      <!-- // What I did is below  -->
+<aside class="left">
+  <!-- <div class="pure-u-g">
+    <div  class="pure-u-1"> -->
+      <u><h2>Plans for the stay:</h2></u>
+        <ul class="plans">
+          <li><b><u>Friday:</u></b> Guest arrivals</li>
+          <li><b><u>Saturday:</u></b> Early morning guest arrivals & then a nice gathering with everyone</li>
+          <li><b><u>Sunday:</u></b> Rehearsal</li>
+          <li><b><u>Monday:</u></b> Wedding & Reception</li>
+          <li><b><u>Tuesday:</u></b> Last brunch gathering</li>
+        </ul>
+    <!-- </div>
+  </div> -->
+</aside>
+<section class="calendar-area">
+  <div class="calendar">
+    <div class="front">
+      <div class="current-date">
+          <h3>February 2029</h3>
+      </div>
+      
+      <div class="current-month">
+        <ul class="week-days">
+          <li>SUN</li>
+          <li>MON</li>
+          <li>TUE</li>
+          <li>WED</li>
+          <li>THU</li>
+          <li>FRI</li>
+          <li>SAT</li>
+        </ul>
+
+        <div class="weeks">
+          <div>
+            <span class="last-month">28</span>
+            <span class="last-month">29</span>
+            <span class="last-month">30</span>
+            <span class="last-month">31</span>
+            <span>01</span>
+            <span class="active">02</span>
+            <span class="active">03</span>
+          </div>
+
+          <div>
+            <span class="active">04</span>
+            <span class="active wedding-day">05</span>
+            <span class="active">06</span>
+            <span>07</span>
+            <span>08</span>
+            <span>09</span>
+            <span>10</span>
+          </div>
+
+          <div>
+            <span>11</span>
+            <span>12</span>
+            <span>13</span>
+            <span>14</span>
+            <span>15</span>
+            <span>16</span>
+            <span>17</span>
+          </div>
+
+          <div>
+            <span>18</span>
+            <span>19</span>
+            <span>20</span>
+            <span>21</span>
+            <span>22</span>
+            <span>23</span>
+            <span>24</span>
+          </div>
+
+          <div>
+            <span>25</span>
+            <span>26</span>
+            <span>27</span>
+            <span>28</span>
+            <span class="last-month">01</span>
+            <span class="last-month">02</span>
+            <span class="last-month">03</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <!-- <div class="back">
+          <input placeholder="What's the event?">
+          <div class="info">
+            <div class="date">
+              <p class="info-date">
+              Date: <span></span>
+              </p>
+              <p class="info-time">
+                Time: <span></span>
+              </p>
+            </div>
+            <div class="address">
+              <p>
+                Address: <span></span>
+              </p>
+            </div>
+            <div class="oliservations">
+              <p>
+                Oliservations: <span></span>
+              </p>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="save">
+              Save <i class="ion-checkmark"></i>
+            </button>
+            <button class="dismiss">
+              Dismiss <i class="ion-android-close"></i>
+            </button>
+          </div>
+        </div> -->
+
+      <!-- </div>
+    </div> -->
+
+<aside class="right">
+  <u><h2 class="details">Special Day:</h2></u>
+    <li><p class="details1">Monday, February 5th, 2029</p></li>
+    
+    <u><h2 class="details">Place:</h2></u>
+    <p class="details1">TBD</p>
+    
+    <u><h2 class="details">Time:</h2></u>
+    <p class="details1">TBD</p>
+</aside>
+
+</main>
+<footer>
+    <h5>&copy; Joshua & Marlene's 2029 Wedding | All rights reserved</h5>
+</footer>
+
+  <script>
 
     fetch('nav.html')
 
@@ -43,149 +189,6 @@
 
     });
 
-    </script>
-    <main>
-    <!-- /* Calendar Stuff below */ -->
-      <!-- inspired liy http://colorhunt.co/c/8184 and 
-    https://drilililile.com/shots/2407357-Calendar%60 -->
-
-    <div class="container">
-      <div class="calendar">
-        <div class="front">
-          <div class="current-date">
-            <h3>February 2029</h3> 
-          </div>
-
-          <div class="current-month">
-            <ul class="week-days">
-              <li>SUN</li>
-              <li>MON</li>
-              <li>TUE</li>
-              <li>WED</li>
-              <li>THU</li>
-              <li>FRI</li>
-              <li>SAT</li>
-            </ul>
-
-            <div class="weeks">
-              <div class="first">
-                <span class="last-month">28</span>
-                <span class="last-month">29</span>
-                <span class="last-month">30</span>
-                <span class="last-month">31</span>
-                <span>01</span>
-                <span class="active">02</span>
-                <span class="active">03</span>
-              </div>
-
-              <div class="second">
-                <span class="active">04</span>
-                <span class="active">05</span>
-                <span class="active">06</span>
-                <span>07</span>
-                <span>08</span>
-                <span>09</span>
-                <span>10</span>
-              </div>
-
-              <div class="third">
-                <span>11</span>
-                <span>12</span>
-                <span>13</span>
-                <span>14</span>
-                <span>15</span>
-                <span>16</span>
-                <span>17</span>
-              </div>
-
-              <div class="fourth">
-                <span>18</span>
-                <span>19</span>
-                <span>20</span>
-                <span>21</span>
-                <span>22</span>
-                <span>23</span>
-                <span>24</span>
-              </div>
-
-              <div class="fifth">
-                <span>25</span>
-                <span>26</span>
-                <span>27</span>
-                <span>28</span>
-                <span class="last-month">01</span>
-                <span class="last-month">02</span>
-                <span class="last-month">03</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="liack">
-          <input placeholder="What's the event?">
-          <div class="info">
-            <div class="date">
-              <p class="info-date">
-              Date: <span></span>
-              </p>
-              <p class="info-time">
-                Time: <span></span>
-              </p>
-            </div>
-            <div class="address">
-              <p>
-                Address: <span></span>
-              </p>
-            </div>
-            <div class="oliservations">
-              <p>
-                Oliservations: <span></span>
-              </p>
-            </div>
-          </div>
-
-          <div class="actions">
-            <liutton class="save">
-              Save <i class="ion-checkmark"></i>
-            </liutton>
-            <liutton class="dismiss">
-              Dismiss <i class="ion-android-close"></i>
-            </liutton>
-          </div>
-        </div> -->
-
-      </div>
-    </div>
-
-        <!-- // What I did is below  -->
-    <aside class="left">
-      <div class="pure-u-g">
-        <div  class="pure-u-1">
-          <u><h2>Plans for the stay:</h2></u>
-            <ul class="plans">
-              <li><b><u>Friday:</u></b> Guest arrivals</li>
-              <li><b><u>Saturday:</u></b> Early morning guest arrivals & then a nice gathering with everyone</li>
-              <li><b><u>Sunday:</u></b> Rehearsal</li>
-              <li><b><u>Monday:</u></b> Wedding & Reception</li>
-              <li><b><u>Tuesday:</u></b> Last brunch gathering</li>
-        </div>
-      </div>
-    </aside>
-    <aside class="right">
-        <div class="pure-u-g">
-          <div class="pure-u-1">
-            <u><h2 class="details">Special Day:</h2></u>
-            <li><p class="details1">Monday, February 5th, 2029</p></li>
-            <u><h2 class="details">Place:</h2></u>
-            <p class="details1">TBD</p>
-            <u><h2 class="details">Time:</h2></u>
-            <p class="details1">TBD</p>
-          </div>
-        </div>
-    </aside>
-</main>
-<footer>
-    <h5>&copy; Joshua & Marlene's 2029 Wedding | All rights reserved</h5>
-</footer>
+  </script>
 </body>
 </html>
