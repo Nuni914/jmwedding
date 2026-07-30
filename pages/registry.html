@@ -2,73 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua & Marlene's Wedding</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-    <link href="../styles/registry.css" rel="stylesheet" type="text/css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Joshua &amp; Marlene's Wedding</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+        crossorigin="anonymous"
+    >
+
+    <link href="../styles/registry.css" rel="stylesheet">
     <link href="../styles/nav.css" rel="stylesheet">
-    <style>
-    
-    </style>
 </head>
-<header>
-    <div class="frame"><h1>Our Registries!</h1></div>
-</header>
+
 <body>
-                <div id="nav-placeholder"></div>
+    <div id="nav-placeholder"></div>
+
     <script>
+        fetch("nav.html")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Navigation could not be loaded.");
+                }
 
-    fetch('nav.html')
+                return response.text();
+            })
+            .then(data => {
+                const navPlaceholder =
+                    document.getElementById("nav-placeholder");
 
-    .then(response => response.text())
+                navPlaceholder.innerHTML = data;
 
-    .then(data => {
+                const toggleButton =
+                    navPlaceholder.querySelector(".toggle-button");
 
-    document.getElementById('nav-placeholder').innerHTML = data;
+                const navbarLinks =
+                    navPlaceholder.querySelector(".romeo");
 
-    // Wait until nav.html is loaded, THEN attach toggle behavior
+                if (toggleButton && navbarLinks) {
+                    toggleButton.addEventListener("click", () => {
+                        const isOpen =
+                            navbarLinks.classList.toggle("active");
 
-    const toggleButton = document.getElementsByClassName('toggle-button')[0];
-
-    const navbarLinks = document.getElementsByClassName('romeo')[0];
-
-    if (toggleButton && navbarLinks) {
-
-    toggleButton.addEventListener('click', () => {
-
-    navbarLinks.classList.toggle('active');
-
-    });
-
-    }
-
-    });
-
+                        toggleButton.setAttribute(
+                            "aria-expanded",
+                            String(isOpen)
+                        );
+                    });
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
     </script>
-<main>
-    <article id="sites">
-        <section class="registry" id="joy">
-            <div class="frame5"><a href="https://withjoy.com/marlene-and-joshua/registry?utm_medium=web&utm_source=joy&utm_campaign=share_website_dialog">Joy</p></a>
-        </div></section>
-        <section class="registry" id="zola">
-            <div class="frame3"><a href="https://www.zola.com/registry/marleneandjoshuageorge">Zola</a>
-        </div></section>
-        <section class="registry" id="amazon">
-            <div class="frame2"><a href="https://www.amazon.com/wedding/share/joshuaandmarlene">Amazon</a>
-        </div></section>
-        <section class="registry" id="moon">
-            <div class="frame4"><a href="https://overthemoon.com/apps/registry/joshuaandmarlene">Over The Moon</p></a>
-        </div></section>
-        <!-- <section class="project" id="images">
-            <a href="pages/opt-image.html">Optimizing Images</p></a>
-        </section> -->
-    </article>
-    <aside>
-        <p>If you have any questions or concerns,<br>please don't heistate to reach out to us!</p>
-    </aside>
-</main>
-<footer>
-    <h5>&copy; Joshua & Marlene's 2029 Wedding | All rights reserved</h5>
-</footer>
+
+    <header>
+        <div class="frame">
+            <h1>Our Registries!</h1>
+        </div>
+    </header>
+
+    <main>
+        <article id="sites">
+            <section class="registry" id="joy">
+                <div class="frame5">
+                    <a
+                        href="https://withjoy.com/marlene-and-joshua/registry?utm_medium=web&utm_source=joy&utm_campaign=share_website_dialog"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Joy
+                    </a>
+                </div>
+            </section>
+
+            <section class="registry" id="zola">
+                <div class="frame3">
+                    <a
+                        href="https://www.zola.com/registry/marleneandjoshuageorge"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Zola
+                    </a>
+                </div>
+            </section>
+
+            <section class="registry" id="amazon">
+                <div class="frame2">
+                    <a
+                        href="https://www.amazon.com/wedding/share/joshuaandmarlene"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Amazon
+                    </a>
+                </div>
+            </section>
+
+            <section class="registry" id="moon">
+                <div class="frame4">
+                    <a href="https://overthemoon.com/apps/registry/joshuaandmarlene" target="_blank" rel="noopener noreferrer">
+                        Over The Moon
+                    </a>
+                </div>
+            </section>
+        </article>
+
+        <aside>
+            <p>
+                If you have any questions or concerns,<br>
+                please don't hesitate to reach out to us!
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        <h5>
+            &copy; Joshua &amp; Marlene's 2029 Wedding |
+            All rights reserved
+        </h5>
+    </footer>
 </body>
 </html>
