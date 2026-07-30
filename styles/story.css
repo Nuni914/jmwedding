@@ -100,8 +100,8 @@ body {
     align-items: flex-end;         /* Aligns both the name and image to the right */
     
     /* To move it to the bottom right of the page/section: */
-    position: fixed;               /* Or 'absolute' depending on your layout */
-    bottom: 3%;
+    position: absolute;               /* Or 'absolute' depending on your layout */
+    bottom: -122px;
     right: 1%;
     z-index: 33;                 /* Ensures it stays on top of other content */
     left: 0;
